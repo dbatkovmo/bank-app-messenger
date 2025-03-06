@@ -1,0 +1,21 @@
+{
+  "placeholders": {
+    "search": "Поиск...",
+    "message": "Написать сообщение..."
+  },
+  "tooltips": {
+    "close_sidebar": "Закрыть сайдбар",
+    "open_sidebar": "Открыть сайдбар",
+    "change_size_sidebar": "Изменить размер сайдбара",
+    "change_theme": "Сменить тему",
+    "change_lang": "Переключить язык",
+    "full_screen": "Полноэкранный режим",
+    "online": "В сети",
+    "offline": "Не в сети"
+  },
+  "tips": {
+    "user_offline": "Пользователи не в сети",
+    "not_found": "Не найдено",
+    "select_chat": "Выберите чат чтобы начать"
+  }
+}

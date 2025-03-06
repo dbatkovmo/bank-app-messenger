@@ -1,0 +1,24 @@
+.msgr__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .msgr__spinner {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #8bdaf8;
+    border-top-color: #2b5278;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

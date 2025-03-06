@@ -1,0 +1,116 @@
+@use '../../styles/index' as *;
+
+.msgr__sidebar {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: $widthChatPanel;
+  background: var(--msgr-color-light);
+  border-right: 1px solid var(--msgr-color-dark);
+  box-sizing: border-box;
+  transition: 0.2s;
+
+  .msgr__search-user {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 70px;
+    width: 100%;
+
+    .msgr__search-user_form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        color: var(--msgr-color-text);
+        padding: 15px 40px 15px 10px;
+        font-size: 14px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .msgr__list-user {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top: 1px solid var(--msgr-color-dark);
+    border-bottom: 1px solid var(--msgr-color-dark);
+
+    .msgr__list-user_alert {
+      text-align: center;
+      color: var(--msgr-color-text);
+      padding: 20px 10px;
+      font-size: 14px;
+      box-sizing: border-box;
+      @include ellipsisText(100%);
+    }
+
+    .msgr__list-user_item {
+      display: flex;
+      align-items: center;
+      color: var(--msgr-color-text);
+      padding: 10px 0;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background: var(--msgr-color-hover);
+        transition: 0.2s;
+      }
+
+      &.msgr__list-user_item-active {
+        background: var(--msgr-color-active);
+      }
+
+      .msgr__list-user_info {
+        strong {
+          font-size: 14px;
+          @include ellipsisText(160px);
+        }
+
+        small {
+          @include ellipsisText(160px);
+        }
+      }
+    }
+  }
+
+  .msgr__control-tools {
+    display: flex;
+    flex-shrink: 0;
+    height: 50px;
+    color: var(--msgr-color-text);
+    position: relative;
+    overflow: hidden;
+
+    .msgr__control-tools_sidebar .msgr__button-icon {
+      position: absolute;
+      right: 0;
+      transition: transform 0.2s;
+    }
+  }
+
+  &.msgr__sidebar_mini {
+    width: 60px;
+
+    .msgr__list-user_alert div {
+      display: none;
+    }
+
+    .msgr__control-tools_sidebar .msgr__button-icon {
+      transform: rotate(180deg);
+      transition: transform 0.2s;
+    }
+  }
+}

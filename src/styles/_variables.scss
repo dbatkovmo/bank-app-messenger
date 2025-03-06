@@ -1,0 +1,22 @@
+$widthChatPanel: 240px;
+
+// Обычные переменные css используем для
+// перерисовки оформления темы без рендера
+// Переменные не связанные с темой можно использовать через SCSS
+.msgr__app[data-theme='light'] {
+  // light (default)
+  --msgr-color-light: #eeeeee;
+  --msgr-color-dark: #dddddd;
+  --msgr-color-hover: #b1dff1;
+  --msgr-color-active: #8bdaf8;
+  --msgr-color-text: #333333;
+}
+
+.msgr__app[data-theme='dark'] {
+  // dark
+  --msgr-color-light: #1b2734;
+  --msgr-color-dark: #0e1621;
+  --msgr-color-hover: #25303e;
+  --msgr-color-active: #2b5278;
+  --msgr-color-text: #ffffff;
+}

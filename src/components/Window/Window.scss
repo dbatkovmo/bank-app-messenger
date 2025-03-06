@@ -1,0 +1,143 @@
+.msgr__window {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .msgr__header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--msgr-color-light);
+    height: 70px;
+    width: 100%;
+
+    .msgr__header_user {
+      display: flex;
+      align-items: center;
+
+      .msgr__header_info {
+        color: var(--msgr-color-text);
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+    .msgr__header_signal {
+      padding: 0 10px;
+      margin-left: auto;
+    }
+  }
+
+  .msgr__dialog-start {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--msgr-color-dark);
+    padding: 10px;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 14px;
+      color: var(--msgr-color-text);
+      background: var(--msgr-color-light);
+
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .msgr__dialog {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--msgr-color-dark);
+    padding: 10px;
+    overflow-y: auto;
+
+    & > div:first-child {
+      margin-top: auto;
+    }
+
+    .msgr__msg {
+      display: flex;
+
+      &.msgr__msg-sender {
+        justify-content: flex-end;
+
+        .msgr__msg-cloud {
+          background: var(--msgr-color-active);
+          border-radius: 20px 20px 1px 20px;
+        }
+      }
+
+      &.msgr__msg-receiver {
+        justify-content: flex-start;
+
+        .msgr__msg-cloud {
+          background: var(--msgr-color-light);
+          border-radius: 20px 20px 20px 1px;
+        }
+      }
+
+      .msgr__msg-cloud {
+        display: flex;
+        padding: 10px;
+        margin: 5px 0;
+        color: var(--msgr-color-text);
+        max-width: 90%;
+
+        .msgr__msg-text {
+          align-self: center;
+        }
+
+        .msgr__msg-time {
+          font-size: 12px;
+          color: #70a8d3;
+          align-self: end;
+          padding-left: 5px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .msgr__footer {
+    flex-shrink: 0;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--msgr-color-light);
+
+    pre {
+      width: 100%;
+      max-height: 100px;
+      padding: 10px;
+      margin: 5px 0;
+      color: var(--msgr-color-text);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      //word-break: break-all;
+      overflow: auto;
+      font-family: Verdana, serif;
+      font-size: 14px;
+
+      &:empty:before {
+        content: attr(data-placeholder);
+        color: gray;
+        pointer-events: none;
+        display: block;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

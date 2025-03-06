@@ -1,0 +1,26 @@
+@forward 'variables';
+@forward 'common';
+
+.msgr__app {
+  display: flex;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--msgr-color-light);
+  border: 1px solid var(--msgr-color-dark);
+  transition: 0.2s;
+  font-family: 'Roboto Light', sans-serif;
+  min-height: 200px;
+  box-sizing: border-box;
+
+  &.msgr__app_full-screen {
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.2s;
+  }
+}

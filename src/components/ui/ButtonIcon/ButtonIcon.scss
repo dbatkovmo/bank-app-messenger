@@ -1,0 +1,15 @@
+.msgr__button-icon {
+  background: var(--msgr-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: var(--msgr-color-hover);
+    transition: 0.2s;
+  }
+}

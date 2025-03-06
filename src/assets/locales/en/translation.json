@@ -1,0 +1,21 @@
+{
+  "placeholders": {
+    "search": "Search...",
+    "message": "Write a message..."
+  },
+  "tooltips": {
+    "close_sidebar": "Close the sidebar",
+    "open_sidebar": "Open the sidebar",
+    "change_size_sidebar": "Change the size of the sidebar",
+    "change_theme": "Change the design",
+    "change_lang": "Switch the language",
+    "full_screen": "Full screen mode",
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "tips": {
+    "user_offline": "Users are offline",
+    "not_found": "Not found",
+    "select_chat": "Select a chat to start messaging"
+  }
+}
